@@ -1,14 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "bootstrap/dist/css/bootstrap.css";
+import { initializeIcons } from '@fluentui/font-icons-mdl2';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+initializeIcons();
+
+const root = document.getElementById('root');
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  root
 );
 
 // If you want to start measuring performance in your app, pass a function
